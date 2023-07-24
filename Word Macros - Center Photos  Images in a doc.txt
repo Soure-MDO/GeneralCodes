@@ -1,0 +1,26 @@
+https://answers.microsoft.com/en-us/msoffice/forum/all/help-with-word-macros-resize-and-center-photos/a1d5ac46-b752-44d5-bf93-f64450f1e886
+
+
+CODE:
+
+
+
+Sub Center_All_Pictures()
+
+  Dim objInLineShape As InlineShape
+
+  Dim objDoc As Document
+
+  Set objDoc = ActiveDocument
+
+  For Each objInLineShape In objDoc.InlineShapes
+
+    objInLineShape.Select
+
+    Selection.ParagraphFormat.Alignment = wdAlignParagraphCenter
+
+  Next objInLineShape
+
+End Sub
+
+

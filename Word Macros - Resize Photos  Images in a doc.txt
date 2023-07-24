@@ -1,0 +1,17 @@
+https://answers.microsoft.com/en-us/msoffice/forum/all/help-with-word-macros-resize-and-center-photos/a1d5ac46-b752-44d5-bf93-f64450f1e886
+
+
+CODE:
+
+
+Sub ScalePictures40()
+    Dim i As Long
+    With ActiveDocument
+        For i = 1 To .InlineShapes.Count
+            With .InlineShapes(i)
+                .ScaleHeight = 140
+                .ScaleWidth = 140
+            End With
+        Next i
+    End With
+End Sub
