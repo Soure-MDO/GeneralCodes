@@ -1,0 +1,6 @@
+Sub HideCement()
+'ActiveSheet.Shapes.Range(Array("Cement")).Visible = msoTrue
+ActiveSheet.Shapes("Cement").Visible = Not ActiveSheet.Shapes("Cement").Visible
+
+End Sub
+
